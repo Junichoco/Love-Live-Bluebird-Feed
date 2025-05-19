@@ -2,18 +2,12 @@ import React, { Component } from "react";
 
 class Feed extends Component {
   render(){
-    const {} = this.props;
+    const { member } = this.props;
 
     return(
 
-      <div id="setlist-scroll">
-        {playedSongs.map((song, index) => {
-          return(
-            <div>
-              <p>{index + 1}. {song}</p>
-            </div>
-          )
-        })}
+      <div>
+        <p>{member}</p>
       </div>
     )
   }

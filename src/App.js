@@ -3,10 +3,15 @@ import './App.css';
 
 import React, { useState } from "react";
 
-// import Feed from "./Components/Feed";
+import Feed from "./Components/Feed";
 
 function App() {
-  const [member, SetMember] = useState("");
+  const [member, setMember] = useState("");
+
+  const changeFeed = (name) => {
+    // SetMember(name);
+    // console.log(name);
+  }
 
   return (
     <div class="App">
@@ -14,8 +19,8 @@ function App() {
         <h1>The Ikizuraibu Feed</h1>
       </div>
       <div className="sidenav">
-        <a>Polka</a>
-        <a>Mai</a>
+        <a onClick={() => setMember("Polka")}>Polka</a>
+        <a onClick={() => setMember("Mai")}>Mai</a>
         <a>Akira</a>
         <a>Hanabi</a>
         <a>Miracle</a>
@@ -25,6 +30,9 @@ function App() {
         <a>Midori</a>
         <a>Shion</a>
       </div>
+      <Feed
+        member={member}
+        />
       <div className="feeds-container">
         <div className="feed">
           <a className="twitter-timeline" data-theme="dark" href="https://twitter.com/polka_lion?ref_src=twsrc%5Etfw">Tweets by polka_lion</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
