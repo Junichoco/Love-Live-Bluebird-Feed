@@ -1,7 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 
+import React, { useState } from "react";
+
+// import Feed from "./Components/Feed";
+
 function App() {
+  const [member, SetMember] = useState("");
+
   return (
     <div class="App">
       <div class="header">
